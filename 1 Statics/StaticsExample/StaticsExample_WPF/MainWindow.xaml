@@ -1,0 +1,31 @@
+﻿<Window x:Class="StaticsExample_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StaticsExample_WPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Statics Example" Height="250" Width="500">
+    <DockPanel>
+        <!-- Bottom Panel with Buttons -->
+        <DockPanel DockPanel.Dock="Bottom">
+            <!-- Settings Button -->
+            <Button x:Name="btnSettings" Content="{materialDesign:PackIcon Cog}"
+                    Margin="5" DockPanel.Dock="Right" ToolTip="Configure Settings" Click="btnSettings_Click"/>
+
+            <!-- Read File Button -->
+            <Button x:Name="btnReadFile" Content="Read File" Margin="5" Click="btnReadFile_Click"/>
+        </DockPanel>
+
+        <!-- Result Display -->
+        <TextBlock x:Name="lblResult" Grid.ColumnSpan="2" Margin="5" TextWrapping="Wrap"/>
+    </DockPanel>
+</Window>
