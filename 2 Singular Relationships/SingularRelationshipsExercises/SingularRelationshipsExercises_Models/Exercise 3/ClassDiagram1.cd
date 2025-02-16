@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="SingularRelationshipsExercises_Models.Exercise_3.Pump">
+    <Position X="6.25" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEABAAAAEIAAAAAAAIAAAAAAACAA=</HashCode>
+      <FileName>Exercise 3\Pump.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingularRelationshipsExercises_Models.Exercise_3.TankMechanism">
+    <Position X="9.75" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAiAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exercise 3\TankMechanism.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

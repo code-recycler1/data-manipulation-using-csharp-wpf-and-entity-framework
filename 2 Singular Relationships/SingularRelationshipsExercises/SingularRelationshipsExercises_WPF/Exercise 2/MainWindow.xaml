@@ -1,0 +1,101 @@
+﻿<Window x:Class="SingularRelationshipsExercises_WPF.Exercise_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SingularRelationshipsExercises_WPF.Exercise_2"
+        mc:Ignorable="d"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        Title="Exercise 2 - Home Automation" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Margin="5">
+        <!-- Defines a grid layout with three rows and three columns -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Kitchen Light Control -->
+        <GroupBox Header="Kitchen Light" Margin="16" Grid.Row="0" Grid.Column="0">
+            <ToggleButton x:Name="btnKitchenLight" Style="{StaticResource MaterialDesignActionToggleButton}" Width="100" Height="100" Click="btnKitchenLight_Click">
+                <ToggleButton.Content>
+                    <materialDesign:PackIcon Kind="LightbulbOffOutline" Width="60" Height="60"/>
+                </ToggleButton.Content>
+                <materialDesign:ToggleButtonAssist.OnContent>
+                    <materialDesign:PackIcon Kind="LightbulbOnOutline" Width="60" Height="60"/>
+                </materialDesign:ToggleButtonAssist.OnContent>
+            </ToggleButton>
+        </GroupBox>
+
+        <!-- Living Room Light Control -->
+        <GroupBox Header="Living Room Light" Margin="16" Grid.Row="0" Grid.Column="1">
+            <ToggleButton x:Name="btnLivingRoomLight" Style="{StaticResource MaterialDesignActionToggleButton}" Width="100" Height="100" Click="btnLivingRoomLight_Click">
+                <ToggleButton.Content>
+                    <materialDesign:PackIcon Kind="LightbulbOffOutline" Width="60" Height="60"/>
+                </ToggleButton.Content>
+                <materialDesign:ToggleButtonAssist.OnContent>
+                    <materialDesign:PackIcon Kind="LightbulbOnOutline" Width="60" Height="60"/>
+                </materialDesign:ToggleButtonAssist.OnContent>
+            </ToggleButton>
+        </GroupBox>
+
+        <!-- Heating Control -->
+        <GroupBox Header="Heating" Margin="16" Grid.Row="0" Grid.Column="2">
+            <DockPanel>
+                <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
+                    <Button x:Name="btnDecreaseTemperature" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Content="-" Margin="5" FontSize="24" Click="btnDecreaseTemperature_Click"/>
+                    <Button x:Name="btnIncreaseTemperature" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Content="+" Margin="5" FontSize="24" Click="btnIncreaseTemperature_Click"/>
+                </StackPanel>
+                <ToggleButton x:Name="btnHeating" Style="{StaticResource MaterialDesignActionToggleButton}" Width="100" Height="100" Click="btnHeating_Click">
+                    <ToggleButton.Content>OFF</ToggleButton.Content>
+                    <materialDesign:ToggleButtonAssist.OnContent>
+                        <TextBlock x:Name="txtElementHeatingTemp" Text="0"/>
+                    </materialDesign:ToggleButtonAssist.OnContent>
+                </ToggleButton>
+            </DockPanel>
+        </GroupBox>
+
+        <!-- Domotics Control -->
+        <GroupBox Header="Domotics Control" materialDesign:ColorZoneAssist.Mode="SecondaryMid" 
+              Margin="16" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btnAutomationKitchenLightOn" Content="Kitchen Light On" 
+                        Style="{StaticResource MaterialDesignRaisedSecondaryButton}" Margin="5" Click="btnAutomationKitchenLightOn_Click"/>
+                    <Button x:Name="btnAutomationKitchenLightOff" Content="Kitchen Light Off" 
+                        Style="{StaticResource MaterialDesignRaisedSecondaryButton}" Margin="5" Click="btnAutomationKitchenLightOff_Click"/>
+                    <Button x:Name="btnAutomationLivingRoomLightOn" Content="Living Room Light On" 
+                        Style="{StaticResource MaterialDesignRaisedSecondaryButton}" Margin="5" Click="btnAutomationLivingRoomLightOn_Click"/>
+                    <Button x:Name="btnAutomationLivingRoomLightOff" Content="Living Room Light Off"  
+                        Style="{StaticResource MaterialDesignRaisedSecondaryButton}" Margin="5" Click="btnAutomationLivingRoomLightOff_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btnAutomationHeatingHomeMode" Content="Heating: Home Mode" 
+                        Style="{StaticResource MaterialDesignRaisedSecondaryButton}" Margin="5" Click="btnAutomationHeatingHomeMode_Click"/>
+                    <Button x:Name="btnAutomationHeatingAwayMode" Content="Heating: Away Mode" 
+                        Style="{StaticResource MaterialDesignRaisedSecondaryButton}" Margin="5" Click="btnAutomationHeatingAwayMode_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Temperature" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtAutomationTempHeating" Width="100" Margin="10"/>
+                    <Button x:Name="btnAutomationSetTemperature" Content="Set Temperature" 
+                        Style="{StaticResource MaterialDesignRaisedSecondaryButton}" Margin="5" Click="btnAutomationSetTemperature_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>

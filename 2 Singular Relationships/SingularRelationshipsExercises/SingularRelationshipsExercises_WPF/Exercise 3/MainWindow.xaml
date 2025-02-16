@@ -1,0 +1,66 @@
+﻿<Window x:Class="SingularRelationshipsExercises_WPF.Exercise_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SingularRelationshipsExercises_WPF.Exercise_3"
+        mc:Ignorable="d"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        Title="Exercise 3 - Gas Pump" Height="350" Width="400" Loaded="Window_Loaded">
+
+    <!-- Defines the layout using a Grid -->
+    <Grid>
+        <!-- Defines two columns for layout -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Defines four rows for layout -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Row for input field -->
+            <RowDefinition Height="Auto"/>
+            <!-- Empty row for spacing -->
+            <RowDefinition Height="Auto"/>
+            <!-- Row for buttons -->
+            <RowDefinition/>
+            <!-- Row for displaying status -->
+        </Grid.RowDefinitions>
+
+        <!-- TextBox for user input: Amount of liters to dispense -->
+        <TextBox x:Name="txtAmountLiters" 
+                 materialDesign:HintAssist.Hint="Amount of Liters" 
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" 
+                 Margin="10"/>
+
+        <!-- Button to start the fueling process -->
+        <Button Name="btnStart" 
+                Content="Start" 
+                Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" 
+                Margin="5" 
+                Click="btnStart_Click"/>
+
+        <!-- Button to check the current fueling status -->
+        <Button Name="btnStatus" 
+                Content="Check Status" 
+                Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
+                Margin="5" 
+                Click="btnStatus_Click"/>
+
+        <!-- TextBlock to display the status of the fueling process -->
+        <TextBlock Name="txtStatus" 
+                   Grid.Row="3" Grid.Column="0" 
+                   Margin="5" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
