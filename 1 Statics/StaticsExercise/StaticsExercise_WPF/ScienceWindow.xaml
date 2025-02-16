@@ -1,0 +1,73 @@
+﻿<Window x:Class="StaticsExercise_WPF.ScienceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StaticsExercise_WPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Scientific Formulas" Height="450" Width="1000" SizeToContent="WidthAndHeight">
+    <DockPanel>
+        <!-- Label to display calculation results -->
+        <TextBlock x:Name="lblResult" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" />
+
+        <!-- StackPanel for scientific formulas -->
+        <StackPanel Orientation="Horizontal">
+            <!-- Gravity Force Calculation -->
+            <GroupBox Header="Gravity Force" Margin="16">
+                <StackPanel>
+                    <TextBox x:Name="txtGravityMass" materialDesign:HintAssist.Hint="Enter the mass here"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             VerticalAlignment="Center" Margin="5" />
+                    <Button x:Name="btnCalculateGravity" Content="Calculate Gravity Force" Margin="5" Click="btnCalculateGravity_Click"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Work Calculation -->
+            <GroupBox Header="Work" Margin="16">
+                <StackPanel>
+                    <TextBox x:Name="txtWorkForce" materialDesign:HintAssist.Hint="Enter the force here"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             VerticalAlignment="Center" Margin="5" />
+                    <TextBox x:Name="txtWorkDisplacement" materialDesign:HintAssist.Hint="Enter the displacement in meters"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             VerticalAlignment="Center" Margin="5" />
+                    <Button x:Name="btnCalculateWork" Content="Calculate Work" Margin="5" Click="btnCalculateWork_Click"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Power Calculation -->
+            <GroupBox Header="Power" Margin="16">
+                <StackPanel>
+                    <TextBox x:Name="txtPowerWork" materialDesign:HintAssist.Hint="Enter the work here"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             VerticalAlignment="Center" Margin="5" />
+                    <TextBox x:Name="txtPowerDuration" materialDesign:HintAssist.Hint="Enter the duration in seconds"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             VerticalAlignment="Center" Margin="5" />
+                    <Button x:Name="btnCalculatePower" Content="Calculate Power" Margin="5" Click="btnCalculatePower_Click"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Gravitational Potential Energy Calculation -->
+            <GroupBox Header="Gravitational Potential Energy" Margin="16">
+                <StackPanel>
+                    <TextBox x:Name="txtGravEnergyMass" materialDesign:HintAssist.Hint="Enter the mass here"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             VerticalAlignment="Center" Margin="5" />
+                    <TextBox x:Name="txtGravEnergyHeight" materialDesign:HintAssist.Hint="Enter the height in meters"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             VerticalAlignment="Center" Margin="5" />
+                    <Button x:Name="btnCalculateGravEnergy" Content="Calculate Gravitational Potential Energy" Margin="5" Click="btnCalculateGravEnergy_Click"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </DockPanel>
+</Window>

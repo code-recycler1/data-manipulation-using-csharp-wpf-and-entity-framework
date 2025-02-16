@@ -1,0 +1,34 @@
+﻿<Window x:Class="StaticsExercise_WPF.ValidationsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StaticsExercise_WPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Validations" Height="450" Width="800" SizeToContent="WidthAndHeight">
+    <DockPanel>
+        <!-- GroupBox for Social Security Number Validation -->
+        <GroupBox Header="Social Security Number" Margin="16">
+            <StackPanel>
+                <!-- TextBox for entering the social security number -->
+                <TextBox x:Name="txtSocialSecurityNumber" materialDesign:HintAssist.Hint="Enter the social security number here"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         VerticalAlignment="Center" Margin="5" />
+
+                <!-- Button to trigger validation -->
+                <Button x:Name="btnSocialSecurityNumber" Content="Verify Social Security Number" Margin="5" Click="btnSocialSecurityNumber_Click"/>
+
+                <!-- Label to display validation result -->
+                <TextBlock x:Name="lblResult" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Bottom" />
+            </StackPanel>
+        </GroupBox>
+    </DockPanel>
+</Window>

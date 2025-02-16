@@ -1,0 +1,26 @@
+﻿<Window x:Class="StaticsExercise_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StaticsExercise_WPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Statics Exercise" Height="450" Width="800" SizeToContent="WidthAndHeight">
+    <Grid>
+        <StackPanel>
+            <!-- Button to open the ScienceWindow -->
+            <Button x:Name="btnScience" Content="Scientific Formulas" Margin="5" Click="btnScience_Click"/>
+
+            <!-- Button to open the ValidationsWindow -->
+            <Button x:Name="btnValidations" Content="Validations" Margin="5" Click="btnValidations_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
