@@ -1,0 +1,4 @@
+﻿Product;JSE6;Murach Java SE6;54,50;
+Book;B001;The Great Gatsby;10,99;F. Scott Fitzgerald 
+Software;S001;Visual Studio;499,99;2022 
+Product;P001;Generic Product;19,99;

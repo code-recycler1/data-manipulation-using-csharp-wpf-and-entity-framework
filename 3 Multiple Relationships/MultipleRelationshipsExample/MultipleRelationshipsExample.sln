@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleRelationshipsExample_WPF", "MultipleRelationshipsExample_WPF\MultipleRelationshipsExample_WPF.csproj", "{1351F64C-4D5F-43EA-9A73-7DE0B2E55113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleRelationshipsExample_DAL", "MultipleRelationshipsExample_DAL\MultipleRelationshipsExample_DAL.csproj", "{60F634E0-5E75-4290-ACFA-AA2F6BA28E04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleRelationshipsExample_Models", "MultipleRelationshipsExample_Models\MultipleRelationshipsExample_Models.csproj", "{0939E220-F1F2-474C-A2A5-C094B65F168B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1351F64C-4D5F-43EA-9A73-7DE0B2E55113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1351F64C-4D5F-43EA-9A73-7DE0B2E55113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1351F64C-4D5F-43EA-9A73-7DE0B2E55113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1351F64C-4D5F-43EA-9A73-7DE0B2E55113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F634E0-5E75-4290-ACFA-AA2F6BA28E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F634E0-5E75-4290-ACFA-AA2F6BA28E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F634E0-5E75-4290-ACFA-AA2F6BA28E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F634E0-5E75-4290-ACFA-AA2F6BA28E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0939E220-F1F2-474C-A2A5-C094B65F168B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0939E220-F1F2-474C-A2A5-C094B65F168B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0939E220-F1F2-474C-A2A5-C094B65F168B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0939E220-F1F2-474C-A2A5-C094B65F168B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
