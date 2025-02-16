@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingularRelationshipsExample_WPF", "SingularRelationshipsExample_WPF\SingularRelationshipsExample_WPF.csproj", "{61D0CDD5-3D65-4097-B8E1-BF6EAB6DFDC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingularRelationshipsExample_DAL", "SingularRelationshipsExample_DAL\SingularRelationshipsExample_DAL.csproj", "{BB1E38ED-D66F-4997-876F-F95D100A2720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingularRelationshipsExample_Models", "SingularRelationshipsExample_Models\SingularRelationshipsExample_Models.csproj", "{26288335-FAA1-47B3-8149-41CB26459A5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61D0CDD5-3D65-4097-B8E1-BF6EAB6DFDC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D0CDD5-3D65-4097-B8E1-BF6EAB6DFDC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D0CDD5-3D65-4097-B8E1-BF6EAB6DFDC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D0CDD5-3D65-4097-B8E1-BF6EAB6DFDC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1E38ED-D66F-4997-876F-F95D100A2720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1E38ED-D66F-4997-876F-F95D100A2720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1E38ED-D66F-4997-876F-F95D100A2720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1E38ED-D66F-4997-876F-F95D100A2720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26288335-FAA1-47B3-8149-41CB26459A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26288335-FAA1-47B3-8149-41CB26459A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26288335-FAA1-47B3-8149-41CB26459A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26288335-FAA1-47B3-8149-41CB26459A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

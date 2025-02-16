@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="SingularRelationshipsExample_Models.Conversions">
+    <Position X="3.25" Y="1.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Conversions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingularRelationshipsExample_Models.OrderLine">
+    <Position X="14.75" Y="1.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAEAAAEgAAAAAAAAAAAAIAAAAAAgAAAAAA=</HashCode>
+      <FileName>OrderLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingularRelationshipsExample_Models.Product">
+    <Position X="8" Y="1.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAgAAAEgAAgAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingularRelationshipsExample_Models.Software">
+    <Position X="5" Y="4.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Software.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingularRelationshipsExample_Models.Book">
+    <Position X="10.25" Y="4.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
