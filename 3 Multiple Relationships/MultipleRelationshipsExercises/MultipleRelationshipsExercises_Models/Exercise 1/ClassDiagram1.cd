@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="MultipleRelationshipsExercises_Models.Exercise_1.Model">
+    <Position X="9.25" Y="1.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAABIAAABQCAAAAEgAEAAAQAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exercise 1\Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MultipleRelationshipsExercises_Models.Exercise_1.ModellingAgency">
+    <Position X="3.5" Y="1.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAQAAAAAAAAAAEAAEAAAAAAAAEAAAAAAgAAAAQAAA=</HashCode>
+      <FileName>Exercise 1\ModellingAgency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

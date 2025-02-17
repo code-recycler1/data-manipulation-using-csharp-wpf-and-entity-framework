@@ -1,0 +1,71 @@
+﻿<Window x:Class="MultipleRelationshipsExercises_WPF.ModellingAgencyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleRelationshipsExercises_WPF"
+        mc:Ignorable="d"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+
+        Title="Exercise 1 - Modelling Agency" Height="450" Width="800" Loaded="Window_Loaded">
+
+    <Grid>
+        <!-- Define three columns: two equal width, one double width -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Define three rows: first auto-sized, second expands, third auto-sized -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Textbox for agency name input -->
+        <TextBox x:Name="txtAgencyName" Grid.Row="0" Grid.Column="0" Margin="5" 
+             materialDesign:HintAssist.Hint="Agency Name" 
+             Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+        <!-- Button to create a new modeling agency -->
+        <Button x:Name="btnCreateAgency" Content="Create Agency" Grid.Row="0" Grid.Column="1" Margin="5" Click="btnCreateAgency_Click"/>
+
+        <!-- Listbox to display created agencies -->
+        <ListBox x:Name="lbAgencies" FontFamily="Courier New"
+             Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"/>
+
+        <!-- GroupBox for model information input -->
+        <GroupBox Header="Model" materialDesign:ColorZoneAssist.Mode="SecondaryMid" 
+                  Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Margin="5">
+            <StackPanel>
+                <!-- Textbox for model name input -->
+                <TextBox x:Name="txtName" Margin="5"
+                     materialDesign:HintAssist.Hint="Name" 
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <!-- Textbox for model height input -->
+                <TextBox x:Name="txtHeight" Margin="5"
+                     materialDesign:HintAssist.Hint="Height (cm)" 
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <!-- Textbox for model wrist size input -->
+                <TextBox x:Name="txtWrist" Margin="5"
+                     materialDesign:HintAssist.Hint="Wrist (cm)" 
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <!-- Button to add a new model -->
+                <Button x:Name="btnAddModel" Content="Add Model" Grid.ColumnSpan="2" Margin="5" Click="btnAddModel_Click"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Button to display models with slim physique -->
+        <Button x:Name="btnShowSlimModels" Content="Show Slim Models" Grid.Row="3" Grid.Column="0" Margin="5" Click="btnShowSlimModels_Click"/>
+    </Grid>
+</Window>

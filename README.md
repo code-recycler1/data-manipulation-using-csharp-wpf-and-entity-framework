@@ -1,1 +1,2 @@
-# data-manipulation-using-csharp-and-wpf
+# data-manipulation-using-csharp-wpf-and-entity-framework
+

@@ -1,0 +1,45 @@
+﻿<Window x:Class="MultipleRelationshipsExercises_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleRelationshipsExercises_WPF"
+        mc:Ignorable="d"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        Title="Multiple Relationships Exercises" Height="220" Width="400">
+    <!-- Main container for the buttons -->
+    <StackPanel>
+        <!-- Button to open the exercise 1 window -->
+        <Button Content="Exercise 1 - Modelling Agency" 
+                x:Name="btnExercise_1_Modelling_Agency"
+                Margin="5" 
+                Click="btnExercise_1_Modelling_Agency_Click"/>
+
+        <!-- Button to open the exercise 2 window -->
+        <Button Content="Exercise 2 - Student Administration" 
+                x:Name="btnExercise_2_Student_Administration" 
+                Margin="5" 
+                Click="btnExercise_2_Student_Administration_Click"/>
+
+        <!-- Button to open the exercise 3 window -->
+        <Button Content="Exercise 3 - Printer Management" 
+                x:Name="btnExercise_3_Printer_Management" 
+                Margin="5" 
+                Click="btnExercise_3_Printer_Management_Click"/>
+
+        <!-- Button to close the application -->
+        <Button Content="Close" 
+                x:Name="btnClose" 
+                Margin="5" 
+                Click="btnClose_Click"/>
+    </StackPanel>
+</Window>
