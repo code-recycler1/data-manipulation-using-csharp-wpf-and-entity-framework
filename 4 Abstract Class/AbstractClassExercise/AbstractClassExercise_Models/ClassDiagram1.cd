@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="AbstractClassExercise_Models.CommissionWorker">
+    <Position X="14.25" Y="7.25" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABCAIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommissionWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractClassExercise_Models.Company">
+    <Position X="26.5" Y="4" Width="3" />
+    <InheritanceLine Type="AbstractClassExercise_Models.BaseClass" FixedFromPoint="true">
+      <Path>
+        <Point X="23.25" Y="2.25" />
+        <Point X="28" Y="2.25" />
+        <Point X="28" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAQEAAAACAAAAEgAAAAAAACAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Company.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Employees" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AbstractClassExercise_Models.Employee">
+    <Position X="20" Y="3.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAGAAABCAAAAEgAAAAAAAAAAAAIAAAAAAAAAAAAg=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractClassExercise_Models.HourlyWorker">
+    <Position X="19.75" Y="9.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABCAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HourlyWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractClassExercise_Models.PieceWorker">
+    <Position X="23" Y="7.25" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>PieceWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractClassExercise_Models.BaseClass">
+    <Position X="20.5" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

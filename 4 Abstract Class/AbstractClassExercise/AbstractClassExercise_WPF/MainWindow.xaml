@@ -1,0 +1,104 @@
+﻿<Window x:Class="AbstractClassExercise_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AbstractClassExercise_WPF"
+        mc:Ignorable="d"
+
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+
+        Title="Exercise 1 - Employees" Height="500" Width="1100" 
+        Loaded="Window_Loaded" SizeToContent="Height">
+    <Grid>
+        <!-- Define three columns with different widths -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- First column (Company & Employee Form) -->
+            <ColumnDefinition Width="*"/>
+            <!-- Second column (Employee Form continued) -->
+            <ColumnDefinition Width="2*"/>
+            <!-- Third column (Employee List) -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Define three rows -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Row for company creation -->
+            <RowDefinition/>
+            <!-- Row for employee form -->
+            <RowDefinition Height="Auto"/>
+            <!-- Row for employee list -->
+        </Grid.RowDefinitions>
+
+        <!-- TextBox for entering company name -->
+        <TextBox x:Name="txtCompany" Grid.Row="0" Grid.Column="0" Margin="5"
+                 materialDesign:HintAssist.Hint="Company Name" 
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+        <!-- Button to create a company -->
+        <Button x:Name="btnCreateCompany" Content="Create Company" Click="btnCreateCompany_Click" 
+                Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <!-- GroupBox containing employee details form -->
+        <GroupBox Header="Employee Details" materialDesign:ColorZoneAssist.Mode="SecondaryMid" 
+                  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="5">
+            <StackPanel>
+                <Grid>
+                    <!-- Define three columns for employee type selection -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Radio buttons for selecting employee type -->
+                    <RadioButton x:Name="rbCommissionWorker" Content="Commission Worker" 
+                                 Grid.Row="0" Grid.Column="0" Style="{StaticResource MaterialDesignTabRadioButton}"  
+                                 Margin="5" Checked="rbCommissionWorker_Checked"/>
+                    <RadioButton x:Name="rbPieceWorker" Content="Piece Worker" 
+                                 Grid.Row="0" Grid.Column="1" Style="{StaticResource MaterialDesignTabRadioButton}"  
+                                 Margin="5" Checked="rbPieceWorker_Checked"/>
+                    <RadioButton x:Name="rbHourlyWorker" Content="Hourly Worker" 
+                                 Grid.Row="0" Grid.Column="2" Style="{StaticResource MaterialDesignTabRadioButton}"  
+                                 Margin="5" Checked="rbHourlyWorker_Checked"/>
+                </Grid>
+
+                <!-- Employee information input fields -->
+                <TextBox x:Name="txtLastName" Margin="5"
+                         materialDesign:HintAssist.Hint="Last Name" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="txtFirstName" Margin="5"
+                         materialDesign:HintAssist.Hint="First Name" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="txtSalary" Margin="5"
+                         materialDesign:HintAssist.Hint="Salary" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="txtExtra" Margin="5"
+                         materialDesign:HintAssist.Hint="Quantity/Units/Hours" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="txtCommission" Margin="5"
+                         materialDesign:HintAssist.Hint="Commission" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+                <!-- Button to add an employee -->
+                <Button x:Name="btnAddEmployee" Content="Add Employee" Grid.ColumnSpan="2" 
+                        Margin="5" Click="btnAddEmployee_Click"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- ComboBox to select a company -->
+        <ComboBox x:Name="cmbCompanies" Grid.Row="0" Grid.Column="2" Margin="5" 
+                  SelectionChanged="cmbCompanies_SelectionChanged"/>
+
+        <!-- ListBox to display employees -->
+        <ListBox x:Name="lbEmployees" Grid.Row="1" Grid.Column="2" Margin="5" FontFamily="Courier New"/>
+    </Grid>
+</Window>
