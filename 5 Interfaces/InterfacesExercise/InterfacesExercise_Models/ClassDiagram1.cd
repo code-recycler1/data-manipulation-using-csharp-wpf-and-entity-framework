@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="InterfacesExercise_Models.RectangleShape" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="3.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABAAAAgAAAAAAAEAAAAAAAAAIQAIAAAAAYAA=</HashCode>
+      <FileName>RectangleShape.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InterfacesExercise_Models.Circle" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="3.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAYAA=</HashCode>
+      <FileName>Circle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="InterfacesExercise_Models.IShape">
+    <Position X="7.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAYAA=</HashCode>
+      <FileName>IShape.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="InterfacesExercise_Models.IMovable">
+    <Position X="5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>IMovable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
