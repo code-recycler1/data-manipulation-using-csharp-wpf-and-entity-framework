@@ -1,0 +1,90 @@
+﻿<Window x:Class="NETInterfacesExercise_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NETInterfacesExercise_WPF"
+        mc:Ignorable="d"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        Title="Exercise 1 - Electronic Devices" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <!-- Grid Row & Column Definitions -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Bank Account Section -->
+        <GroupBox Header="Bank Account" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!-- IBAN Input & Open Account Button -->
+                <TextBox x:Name="txtIBAN" Margin="5" Grid.Column="0"
+                     materialDesign:HintAssist.Hint="IBAN" 
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button x:Name="btnOpenAccount" Content="Open Account" Grid.Column="2" Margin="5" Click="btnOpenAccount_Click"/>
+
+                <!-- Amount Input & Action Buttons -->
+                <TextBox x:Name="txtAmount" Margin="5" Grid.Column="0" Grid.Row="1"
+                     materialDesign:HintAssist.Hint="Amount" 
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button x:Name="btnDeposit" Content="Deposit" Grid.Column="1" Grid.Row="1" Margin="5" Click="btnDeposit_Click"/>
+                <Button x:Name="btnWithdraw" Content="Withdraw" Grid.Column="2" Grid.Row="1" Margin="5" Click="btnWithdraw_Click"/>
+
+                <!-- Bank Account Status Label -->
+                <Label x:Name="lblBankAccount" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"/>
+            </Grid>
+        </GroupBox>
+
+        <!-- Purchases Section -->
+        <GroupBox Header="Purchases" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!-- Product Selection & Actions -->
+                <ComboBox x:Name="cmbProducts" Grid.Row="0" Grid.Column="0"
+                      materialDesign:HintAssist.Hint="Search" 
+                      IsEditable="True" 
+                      materialDesign:HintAssist.HintOpacity=".26" Margin="5"/>
+                <Button x:Name="btnBuy" Content="Buy" Grid.Row="0" Grid.Column="1" Margin="5" Click="btnBuy_Click"/>
+                <Button x:Name="btnNewProduct" Content="New Product" Margin="5"
+                    Style="{StaticResource MaterialDesignRaisedSecondaryButton}"
+                    ToolTip="Add a new product" Grid.Row="0" Grid.Column="2" Click="btnNewProduct_Click"/>
+
+                <!-- Ownership Status Label -->
+                <Label x:Name="lblOwnership" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
