@@ -56,6 +56,11 @@ namespace EFNavigationPropertiesExercise_DAL
             }
         }
 
+        /// <summary>
+        /// Retrieves a list of employees from the database, including their associated publishers and job details.
+        /// The list is ordered by last name and then by first name.
+        /// </summary>
+        /// <returns>A list of employees with related publisher and job data.</returns>
         public static List<Employee> GetEmployees()
         {
             using (PublishersEntities publishersEntities = new PublishersEntities())
@@ -69,6 +74,11 @@ namespace EFNavigationPropertiesExercise_DAL
             }
         }
 
+        /// <summary>
+        /// Retrieves a list of titles from the database, including their associated authors.
+        /// The list is ordered alphabetically by title name.
+        /// </summary>
+        /// <returns>A list of titles with their related authors.</returns>
         public static List<Title> GetTitles()
         {
             using (PublishersEntities publishersEntities = new PublishersEntities())
@@ -80,6 +90,11 @@ namespace EFNavigationPropertiesExercise_DAL
             }
         }
 
+        /// <summary>
+        /// Retrieves a list of publishers from the database, including their associated titles and authors.
+        /// The list is ordered alphabetically by publisher name.
+        /// </summary>
+        /// <returns>A list of publishers with their related titles and authors.</returns>
         public static List<Publisher> GetPublishers()
         {
             using (PublishersEntities publishersEntities = new PublishersEntities())
@@ -91,6 +106,11 @@ namespace EFNavigationPropertiesExercise_DAL
             }
         }
 
+        /// <summary>
+        /// Retrieves a list of stores from the database, including their associated sales and titles.
+        /// The list is ordered alphabetically by store name.
+        /// </summary>
+        /// <returns>A list of stores with their related sales and titles.</returns>
         public static List<Store> GetStores()
         {
             using (PublishersEntities publishersEntities = new PublishersEntities())

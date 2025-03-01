@@ -16,27 +16,49 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         
         Title="Navigation Properties" Height="450" Width="800">
+
+    <!-- Main layout grid with margin for spacing -->
     <Grid Margin="10">
+        <!-- Define grid row structure -->
         <Grid.RowDefinitions>
             <RowDefinition/>
+            <!-- Row for Fetch Employees button -->
             <RowDefinition/>
+            <!-- Row for Fetch Titles button -->
             <RowDefinition/>
+            <!-- Row for Fetch Publishers button -->
             <RowDefinition/>
+            <!-- Row for Fetch Stores button -->
             <RowDefinition/>
+            <!-- Additional spacing row -->
             <RowDefinition/>
+            <!-- Additional spacing row -->
         </Grid.RowDefinitions>
+
+        <!-- Define grid column structure -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <!-- First column for data display -->
             <ColumnDefinition Width="auto"/>
+            <!-- Second column for buttons -->
         </Grid.ColumnDefinitions>
 
+        <!-- ScrollViewer for displaying fetched data -->
         <ScrollViewer Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Margin="5">
             <Label x:Name="lblData" FontFamily="Courier New" />
+            <!-- Label to display data -->
         </ScrollViewer>
 
+        <!-- Button to fetch employees -->
         <Button x:Name="btnFetchEmployees" Content="Fetch Employees" Margin="5" Grid.Row="0" Grid.Column="1" Click="btnFetchEmployees_Click"/>
+
+        <!-- Button to fetch titles -->
         <Button x:Name="btnFetchTitles" Content="Fetch Titles" Margin="5" Grid.Row="1" Grid.Column="1" Click="btnFetchTitles_Click"/>
+
+        <!-- Button to fetch publishers -->
         <Button x:Name="btnFetchPublishers" Content="Fetch Publishers" Margin="5" Grid.Row="2" Grid.Column="1" Click="btnFetchPublishers_Click"/>
+
+        <!-- Button to fetch stores -->
         <Button x:Name="btnFetchStores" Content="Fetch Stores" Margin="5" Grid.Row="3" Grid.Column="1" Click="btnFetchStores_Click"/>
     </Grid>
 </Window>

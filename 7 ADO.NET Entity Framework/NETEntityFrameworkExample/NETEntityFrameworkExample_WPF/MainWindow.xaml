@@ -15,62 +15,80 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         
-        Title="ADO.NET Entity Framework" Height="450" Width="1100">
+        Title="ADO.NET Entity Framework Example" Height="450" Width="1100">
+    
+    <!-- Main layout container -->
     <DockPanel>
+
+        <!-- Search & control section at the bottom -->
         <Grid DockPanel.Dock="Bottom" Margin="10">
+            
+            <!-- Define rows for input fields and buttons -->
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition/> <!-- All Employees Button -->
+                <RowDefinition/> <!-- Search by Job Title -->
+                <RowDefinition/> <!-- Search by Full Name -->
+                <RowDefinition/> <!-- Search by Employee ID -->
+                <RowDefinition/> <!-- Extra spacing -->
             </Grid.RowDefinitions>
+
+            <!-- Define columns for input fields and buttons -->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition/> <!-- Input fields -->
+                <ColumnDefinition/> <!-- Buttons -->
+                <ColumnDefinition/> <!-- Additional buttons -->
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnAllEmployees" Grid.Column="0" Margin="5" Grid.ColumnSpan="2"
-                Content="All Employees" Click="btnAllEmployees_Click"/>
 
-            <TextBox x:Name="txtJobTitle" Grid.Column="0" Margin="5" Grid.Row="1"
-                 materialDesign:HintAssist.Hint="Job Title"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 VerticalAlignment="Center" />
-            <Button x:Name="btnFetchEmployeesByJobTitle" Content="Search Employees by Job Title" Margin="5"
-                Grid.Row="1" Grid.Column="1" Click="btnFetchEmployeesByJobTitle_Click"/>
+            <!-- Button to fetch all employees -->
+            <Button x:Name="btnAllEmployees" Grid.Column="0" Grid.ColumnSpan="2" 
+                    Margin="5" Content="All Employees" Click="btnAllEmployees_Click"/>
 
-            <TextBox x:Name="txtLastName" Grid.Column="0" Margin="5" Grid.Row="2"
-                 materialDesign:HintAssist.Hint="Last Name"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 VerticalAlignment="Center" />
-            <TextBox x:Name="txtFirstName" Grid.Column="1" Margin="5" Grid.Row="2"
-                 materialDesign:HintAssist.Hint="First Name"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 VerticalAlignment="Center" />
-            <Button x:Name="btnFetchEmployeeByFullName" Content="Search Employee by Last Name and First Name" Margin="5"
-                Grid.Row="2" Grid.Column="2" Click="btnFetchEmployeeByFullName_Click"/>
+            <!-- Search by Job Title -->
+            <TextBox x:Name="txtJobTitle" Grid.Column="0" Grid.Row="1" Margin="5"
+                     materialDesign:HintAssist.Hint="Job Title"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     VerticalAlignment="Center"/>
+            <Button x:Name="btnFetchEmployeesByJobTitle" Grid.Column="1" Grid.Row="1" 
+                    Margin="5" Content="Search Employees by Job Title" 
+                    Click="btnFetchEmployeesByJobTitle_Click"/>
 
-            <TextBox x:Name="txtEmployeeID" Grid.Column="0" Margin="5" Grid.Row="3"
-                 materialDesign:HintAssist.Hint="Employee ID"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 VerticalAlignment="Center" />
-            <Button x:Name="btnFetchEmployeeByEmployeeID" Content="Search Employee by ID" Margin="5"
-                Grid.Row="3" Grid.Column="1" Click="btnFetchEmployeeByEmployeeID_Click"/>
-            <Label x:Name="lblEmployee" Grid.Column="3" Grid.Row="3" Margin="5" />
+            <!-- Search by First and Last Name -->
+            <TextBox x:Name="txtLastName" Grid.Column="0" Grid.Row="2" Margin="5"
+                     materialDesign:HintAssist.Hint="Last Name"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     VerticalAlignment="Center"/>
+            <TextBox x:Name="txtFirstName" Grid.Column="1" Grid.Row="2" Margin="5"
+                     materialDesign:HintAssist.Hint="First Name"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     VerticalAlignment="Center"/>
+            <Button x:Name="btnFetchEmployeeByFullName" Grid.Column="2" Grid.Row="2" 
+                    Margin="5" Content="Search Employee by Last Name and First Name" 
+                    Click="btnFetchEmployeeByFullName_Click"/>
+
+            <!-- Search by Employee ID -->
+            <TextBox x:Name="txtEmployeeID" Grid.Column="0" Grid.Row="3" Margin="5"
+                     materialDesign:HintAssist.Hint="Employee ID"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     VerticalAlignment="Center"/>
+            <Button x:Name="btnFetchEmployeeByEmployeeID" Grid.Column="1" Grid.Row="3" 
+                    Margin="5" Content="Search Employee by ID" 
+                    Click="btnFetchEmployeeByEmployeeID_Click"/>
+            <Label x:Name="lblEmployee" Grid.Column="3" Grid.Row="3" Margin="5"/>
+
         </Grid>
 
+        <!-- DataGrid to display employee records -->
         <DataGrid x:Name="dataEmployees" AutoGenerateColumns="False" Margin="10">
             <DataGrid.Columns>
-            <DataGridTextColumn Header="Employee ID" Binding="{Binding EmployeeID}" />
-            <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
-            <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" />
-            <DataGridTextColumn Header="Job Title" Binding="{Binding JobTitle}" />
-            <DataGridTextColumn Header="Courtesy Title" Binding="{Binding CourtesyTitle}" />
-            <DataGridTextColumn Header="Date Of Birth" Binding="{Binding DateOfBirth}" />
-            <DataGridTextColumn Header="Hire Date" Binding="{Binding HireDate}" />
-            <DataGridTextColumn Header="Orders" Binding="{Binding Orders}" />
-        </DataGrid.Columns>
+                <DataGridTextColumn Header="Employee ID" Binding="{Binding EmployeeID}"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Job Title" Binding="{Binding JobTitle}"/>
+                <DataGridTextColumn Header="Courtesy Title" Binding="{Binding CourtesyTitle}"/>
+                <DataGridTextColumn Header="Date Of Birth" Binding="{Binding DateOfBirth}"/>
+                <DataGridTextColumn Header="Hire Date" Binding="{Binding HireDate}"/>
+                <DataGridTextColumn Header="Orders" Binding="{Binding Orders}"/>
+            </DataGrid.Columns>
         </DataGrid>
     </DockPanel>
 </Window>

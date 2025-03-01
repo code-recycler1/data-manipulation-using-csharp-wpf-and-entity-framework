@@ -16,36 +16,57 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         
         Title="Exercise 1 - Publishers" Height="450" Width="800" Loaded="Window_Loaded">
+    <!-- Main layout grid -->
     <Grid>
+        <!-- Define grid row structure -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <!-- Row for store search -->
             <RowDefinition Height="Auto"/>
+            <!-- Row for employee search -->
             <RowDefinition/>
+            <!-- Row for data grid -->
+            <RowDefinition Height="Auto"/>
+            <!-- Row for navigation buttons -->
         </Grid.RowDefinitions>
+
+        <!-- Define grid column structure -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <!-- First column -->
             <ColumnDefinition/>
+            <!-- Second column -->
         </Grid.ColumnDefinitions>
 
+        <!-- TextBox for entering store name -->
         <TextBox x:Name="txtStoreName" materialDesign:HintAssist.Hint="Name"
-         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-         VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="5"/>
+             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+             VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="5"/>
+
+        <!-- Button to search for stores -->
         <Button x:Name="btnSearchStores" Content="Search Stores" Grid.Row="0" Grid.Column="1" Margin="5" Click="btnSearchStores_Click"/>
+
+        <!-- ComboBox to select a job -->
         <ComboBox x:Name="cmbJobs" DisplayMemberPath="JobDescription" materialDesign:HintAssist.Hint="Search" Grid.Row="1" Grid.Column="0" Margin="5"/>
+
+        <!-- Button to search for employees based on selected job -->
         <Button x:Name="btnSearchEmployees" Content="Search Employees" Grid.Row="1" Grid.Column="1" Margin="5" Click="btnSearchEmployees_Click"/>
+
+        <!-- DataGrid to display store results -->
         <DataGrid x:Name="datagridStores" AutoGenerateColumns="True" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <!-- Uncomment and customize columns as needed -->
             <!--<DataGrid.Columns>
-                <DataGridTextColumn Header="Employee ID" Binding="{Binding EmployeeID}" />
-                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" />
-                <DataGridTextColumn Header="Middle Initial" Binding="{Binding MiddleInitial}" />
-                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
-                <DataGridTextColumn Header="Job ID" Binding="{Binding JobID}" />
-                <DataGridTextColumn Header="Job Level" Binding="{Binding JobLevel}" />
-                <DataGridTextColumn Header="Publisher ID" Binding="{Binding PublisherID}" />
-                <DataGridTextColumn Header="Hire Date" Binding="{Binding HireDate}" />
-                <DataGridTextColumn Header="Job" Binding="{Binding Job.JobDescription}" />
-                <DataGridTextColumn Header="Publisher" Binding="{Binding Publisher.Name}" />
-            </DataGrid.Columns>-->
+            <DataGridTextColumn Header="Employee ID" Binding="{Binding EmployeeID}" />
+            <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" />
+            <DataGridTextColumn Header="Middle Initial" Binding="{Binding MiddleInitial}" />
+            <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
+            <DataGridTextColumn Header="Job ID" Binding="{Binding JobID}" />
+            <DataGridTextColumn Header="Job Level" Binding="{Binding JobLevel}" />
+            <DataGridTextColumn Header="Publisher ID" Binding="{Binding PublisherID}" />
+            <DataGridTextColumn Header="Hire Date" Binding="{Binding HireDate}" />
+            <DataGridTextColumn Header="Job" Binding="{Binding Job.JobDescription}" />
+            <DataGridTextColumn Header="Publisher" Binding="{Binding Publisher.Name}" />
+        </DataGrid.Columns>-->
         </DataGrid>
     </Grid>
 </Window>
