@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="04f7245b86dc477a8107b303a2908b04" Name="Diagram1">
+        <EntityTypeShape EntityType="PublishersModel.Author" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishersModel.Discount" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishersModel.Employee" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishersModel.Job" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishersModel.Publisher" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishersModel.Sale" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishersModel.Store" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishersModel.Title" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PublishersModel.TitleAuthor" Width="1.5" PointX="8.25" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="PublishersModel.FK_TitleAuthor_Authors" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishersModel.FK_Employee_Jobs" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishersModel.FK_Employee_Publishers" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishersModel.FK_Titles_Publishers" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishersModel.FK_Sales_Stores" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishersModel.FK_Sales_Titles" ManuallyRouted="false" />
+        <AssociationConnector Association="PublishersModel.FK_TitlesAuthors_titles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
